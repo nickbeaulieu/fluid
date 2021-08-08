@@ -1,0 +1,16 @@
+.loader {
+    display: block;
+    border-radius: 50%;
+    border: 6px solid #4338ca;
+    border-color: #4338ca #f9fafb #f9fafb #f9fafb;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
