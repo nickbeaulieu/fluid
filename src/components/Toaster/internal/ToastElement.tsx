@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { jsx, keyframes } from '@emotion/core';
-
+import { Icon } from '../../Icon';
 import type { HoverFn, Placement } from './types';
 import { Noop } from './utils';
-import { Icon } from '../../Icon';
 
 // common
-export const borderRadius = 4;
 export const gutter = 8;
-export const toastWidth = 360;
-export const shrinkKeyframes = keyframes`from { height: 100%; } to { height: 0% }`;
 
 // a11y helper
 const A11yText = ({ ...props }) => (
@@ -59,12 +54,7 @@ const appearances = {
 };
 export type AppearanceTypes = 'success' | 'info' | 'warning' | 'error';
 
-const Button = (
-    props: React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >,
-) => (
+const Button = (props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
     <div
         role="button"
         className="cursor-pointer flex-shrink-0 opacity-50 hover:opacity-100 py-2 px-3 transition-opacity"
@@ -72,12 +62,7 @@ const Button = (
     />
 );
 
-const Content = (
-    props: React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLDivElement>,
-        HTMLDivElement
-    >,
-) => (
+const Content = (props: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
     <div
         className="flex-grow text-sm py-2 px-3"
         style={{
@@ -142,11 +127,7 @@ const ToasterIcon: React.FC<{
 
 function getTranslate(placement: Placement) {
     const pos = placement.split('-');
-    const relevantPlacement = (pos[1] === 'center' ? pos[0] : pos[1]) as
-        | 'right'
-        | 'left'
-        | 'bottom'
-        | 'top';
+    const relevantPlacement = (pos[1] === 'center' ? pos[0] : pos[1]) as 'right' | 'left' | 'bottom' | 'top';
     const translateMap = {
         right: 'translate3d(120%, 0, 0)',
         left: 'translate3d(-120%, 0, 0)',
@@ -259,9 +240,7 @@ export const DefaultToast = ({
         {onDismiss ? (
             <Button onClick={onDismiss}>
                 <Icon icon="x-circle" />
-                <A11yText className="react-toast-notifications__toast__dismiss-text">
-                    Close
-                </A11yText>
+                <A11yText className="react-toast-notifications__toast__dismiss-text">Close</A11yText>
             </Button>
         ) : null}
     </ToastElement>
