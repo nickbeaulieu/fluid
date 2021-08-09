@@ -32,6 +32,7 @@ import { Toggle, ToggleProps } from './components/Toggle';
 import { Tooltip, TooltipProps } from './components/Tooltip';
 import { useInput } from './hooks/useInput';
 import { useLambda } from './hooks/useLambda';
+import { useToggle } from './hooks/useToggle';
 
 /*******************************************************************
  Exports
@@ -64,7 +65,7 @@ export { Tooltip, TooltipProps };
 // Toaster
 export { useToasts, ToastContainer, ToastConsumer, ToastProvider };
 // Hooks
-export { useLambda, useInput };
+export { useLambda, useInput, useToggle };
 // Dates
 export { DatesPicker as DatePicker, DatesPickerProps as DatePickerProps };
 // Utilities

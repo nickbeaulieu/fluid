@@ -32,6 +32,7 @@ import { Toggle, ToggleProps } from './components/Toggle';
 import { Tooltip, TooltipProps } from './components/Tooltip';
 import { useInput } from './hooks/useInput';
 import { useLambda } from './hooks/useLambda';
+import { useToggle } from './hooks/useToggle';
 /*******************************************************************
  Exports
 *******************************************************************/
@@ -59,7 +60,7 @@ export { TextArea, TextAreaProps };
 export { Toggle, ToggleProps };
 export { Tooltip, TooltipProps };
 export { useToasts, ToastContainer, ToastConsumer, ToastProvider };
-export { useLambda, useInput };
+export { useLambda, useInput, useToggle };
 export { DatesPicker as DatePicker, DatesPickerProps as DatePickerProps };
 export { Modal, ModalProps };
 export { GlobalStyles, FocusCheck };
