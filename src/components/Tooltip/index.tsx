@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { useLambda } from '../../hooks/useLambda';
-import { Icon } from '../Icon';
-import { Icons } from '../Icon/types';
+import { Icon, Icons } from '../Icon';
 import { Popover } from '../Popover';
 
 export interface TooltipProps {

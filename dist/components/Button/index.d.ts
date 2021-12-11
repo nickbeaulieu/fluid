@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icons } from '../Icon/types';
+import { Icons } from '../Icon';
 export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     className?: string;
     intent?: 'primary' | 'secondary' | 'destructive';
